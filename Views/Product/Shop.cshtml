@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/products/shop.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        @await Html.PartialAsync("ProductPartials/_NavBar")
+    </header>
+
+    @model List<Product>
+
+    @foreach (Product product in Model)
+    {
+        <div class="position-relative">
+
+            <a href="/codepink/@product.ProductId"><img src="@product.Img1"></a>
+            <a href="/codepink/@product.ProductId">
+                <p>@product.Name</p>
+            </a>
+            <a href="/codepink/@product.ProductId">
+                <p>$@product.Price</p>
+            </a>
+            <form asp-controller="Product" asp-action="AddToCart" asp-route-id="@product.ProductId">
+                <button class="btn" onclick="buttonClick()">Add To Cart</button>
+            </form>
+
+        </div>
+
+    }
+
+
+
+    <footer>
+        @await Html.PartialAsync("IndexPartials/_Footer")
+    </footer>
+    <script src="~/js/index/index.js"></script>
+</body>
+
+</html>

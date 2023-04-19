@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    width: 100%;
+}
+#logo {
+    width: 200px;
+	margin-top: 2vh;
+}
+
+
+/*****NAV****/
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+	margin-top: 3vh;
+	margin-bottom: 40px;
+}
+nav a {
+    color: white;
+	font-family: 'Nunito Sans', sans-serif;
+	text-decoration: none;
+}

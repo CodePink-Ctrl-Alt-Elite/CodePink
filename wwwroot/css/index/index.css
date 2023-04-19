@@ -1,0 +1,1003 @@
+body {
+    background-color: pink;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#logo {
+    width: 120px;
+	/* margin-top: 2vh; */
+}
+
+/* COOKIE POPUP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+/*****NAV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!****/
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30px;
+	margin-top: 5vh;
+	margin-bottom: 40px;
+	align-items: flex-start;
+}
+nav div a {
+    color: white;
+	font-family: 'Clash Display';
+	font-weight: bold;
+	text-decoration: none;
+}
+#cartimg {
+	height: 4vh;
+}
+#logo {
+	height: 10vh;
+	width: 22vh;
+}
+.middleofnav {
+	display: flex;
+	flex-direction: row;
+}
+#submenu {
+    /* left: 0;
+    right: 0; */
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+    list-style-type: none;
+}
+#submenu li {
+    float: none;
+    width: 170%;
+    margin-left: -70px;
+    text-align: center;
+	margin-top: 3vh;
+}
+li:hover ul#submenu {
+    opacity: 1;
+    top: 50px;
+    visibility: visible;
+}
+
+
+
+
+
+/* HERO SECTION */
+.herotop {
+	margin-top: 10vh;
+}
+.heroheader {
+	color: white;
+	font-family: 'Clash Display';
+	font-weight: bold;
+	font-size: 100px;
+}
+
+
+
+
+
+
+/* TWIST GRAPHICS */
+/* #twistwrap div.twistwrapper {
+	margin-top: calc(50vmin - 50vmax);
+  }
+  
+	span div {
+	width: 100vmax;
+	height: 100vmax;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*
+	background: black;
+	box-shadow: inset 0px 0px 1px 0px red,
+	  0px 0px 1px 0px red;
+	*/
+	border: solid thin #FF00FF;
+	border-radius: 25%;
+	animation: twist 2.5s ease-in-out infinite alternate;
+  }
+  
+  span div:hover {}
+  
+  span div > div {
+	width: 90%;
+	height: 90%;
+	/*
+	opacity:.9;
+	*/
+  }
+  
+  .reverse {
+	animation: reverseTwist 6s linear infinite normal;
+	/*
+	opacity: .5;
+	*/
+  }
+  
+  .twistwrapper {
+	overflow: hidden;
+	background: black;
+  }
+  
+  @keyframes twist {
+	from {
+	  transform: rotate(-10deg)
+	  /*
+		scale(.99)
+		*/
+	  ;
+	}
+	/*
+	50%{
+	  border-color:black;
+	  opacity:1;
+	  border-radius:50%;
+	   transform: scale(1.25); 
+	}
+	*/
+	to {
+	  transform: rotate(10deg)
+	  /*
+		scale(.99)
+		*/
+	  ;
+	}
+  }
+  
+  @keyframes reverseTwist {
+	to {
+	  transform: rotate(-360deg);
+	}
+  }
+  
+  @media (orientation: portrait) {
+	span div.wrapper {
+	  margin-top: 0;
+	  margin-left: calc(50vmin - 50vmax);
+	}
+  }
+##twistwrap {
+	margin-top: 70vh;
+}
+
+
+ */
+
+
+
+/*ZOOM KITS*/
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,80%);
+	--fg: hsl(var(--hue),10%,10%);
+	--trans-dur: 0.3s;
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
+}
+/* #body {
+	background-color: var(--bg);
+	color: var(--fg);
+	display: flex;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+} */
+#body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+/* Initial icon styles */
+.camera,
+.camera__red-light,
+.camera__lens-ring-glare1,
+.camera__lens-ring-glare2,
+.camera__lens-ring-glare3,
+.camera__lens-inner,
+.camera__lens-inner-glare1,
+.camera__lens-inner-glare2,
+.camera__lens-glare,
+.camera__lens-eye-ring,
+.camera__lens-eye-inner-glare,
+.camera__lens-eye-center,
+.camera__lens-eye-center-glare,
+.camera__lens-eye-glass,
+.camera__lens-eye-glare {
+	animation: camera 4s ease-in-out infinite;
+}
+.camera {
+	background-color: hsl(var(--hue),10%,60%);
+	border-radius: 3em;
+	display: flex;
+	margin: 1.5em;
+	position: relative;
+	width: 14em;
+	height: 14em;
+	transform: translateZ(0);
+	transform-style: preserve-3d;
+}
+.camera__front,
+.camera__contents,
+.camera__red-light,
+.camera__lens-inner,
+.camera__lens-inner-glare1,
+.camera__lens-inner-glare2,
+.camera__lens-glare,
+.camera__lens-ring,
+.camera__lens-ring-glare1,
+.camera__lens-ring-glare2,
+.camera__lens-ring-glare3,
+.camera__lens-eye,
+.camera__lens-eye-shadow,
+.camera__lens-eye-ring,
+.camera__lens-eye-inner-glare,
+.camera__lens-eye-center,
+.camera__lens-eye-center-glare,
+.camera__lens-eye-glass,
+.camera__lens-eye-glass-color,
+.camera__lens-eye-glare,
+.camera__lens-shadow,
+.camera__shadow {
+	position: absolute;
+}
+.camera__red-light,
+.camera__lens-back,
+.camera__lens-ring,
+.camera__lens-inner,
+.camera__lens-inner-glare1,
+.camera__lens-inner-glare2,
+.camera__lens-glare,
+.camera__lens-ring-glare1,
+.camera__lens-ring-glare2,
+.camera__lens-ring-glare3,
+.camera__lens-eye,
+.camera__lens-eye-shadow,
+.camera__lens-eye-ring,
+.camera__lens-eye-center,
+.camera__lens-eye-glass,
+.camera__lens-eye-glass-color {
+	border-radius: 50%;
+}
+.camera__front {
+	background-image: linear-gradient(hsl(var(--hue),10%,85%),hsl(var(--hue),10%,90%));
+	border-radius: inherit;
+	box-shadow: 0 0.1em 0 hsl(var(--hue),10%,95%) inset;
+	width: 100%;
+	height: 100%;
+	transform: translateZ(1em);
+	z-index: 1;
+}
+.camera__contents {
+	top: 2.5em;
+	left: 2.5em;
+	width: 9em;
+	height: 9em;
+	transform: translateZ(1em);
+	transform-style: preserve-3d;
+	z-index: 2;
+}
+.camera__red-light {
+	animation-name: cameraRedLight;
+	background-color: hsl(3,90%,65%);
+	box-shadow:
+		0.1em -0.1em 0.1em 0.1em hsl(3,90%,50%) inset,
+		0 0 0.5em 0.25em hsla(3,90%,70%,0.5);
+	top: 0;
+	right: 0;
+	width: 0.6em;
+	height: 0.6em;
+}
+.camera__lens-back,
+.camera__lens-ring,
+.camera__lens-inner {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.camera__lens-back {
+	background-color: hsl(var(--hue),10%,70%);
+	transform: translateZ(0.01em);
+}
+.camera__lens-ring {
+	background-color: hsl(var(--hue),10%,45%);
+	border-radius: 50%;
+	overflow: hidden;
+	transform: translateZ(1.5em);
+}
+.camera__lens-ring-glare1 {
+	animation-name: cameraRingGlare1;
+	background-image: radial-gradient(100% 100% at center,hsl(0,0%,100%) 25%,hsla(0,0%,100%,0) 50%);
+	bottom: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 50%;
+}
+.camera__lens-ring-glare2 {
+	animation-name: cameraRingGlare2;
+	background-image: radial-gradient(100% 100% at center,hsl(var(--hue),10%,85%) 30%,hsla(var(--hue),10%,85%,0) 50%);
+	top: 30%;
+	right: 30%;
+	width: 140%;
+	height: 140%;
+}
+.camera__lens-ring-glare3 {
+	animation-name: cameraRingGlare3;
+	background-image: radial-gradient(100% 100% at center,hsl(var(--hue),10%,70%) 30%,hsla(var(--hue),10%,70%,0) 50%);
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
+.camera__lens-inner {
+	animation-name: cameraLensInner;
+	background-color: hsl(var(--hue),10%,65%);
+	box-shadow: 0 0 0 0.125em hsl(var(--hue),10%,50%);
+	top: 0.5em;
+	left: 0.5em;
+	width: 8em;
+	height: 8em;
+	transform: translateZ(1.5em);
+}
+.camera__lens-inner-glare1 {
+	animation-name: cameraLensInnerGlare1;
+	box-shadow: 0.5em -1em 0.5em 0.5em hsl(var(--hue),10%,85%) inset;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+.camera__lens-inner-glare2 {
+	animation-name: cameraLensInnerGlare2;
+	border: 1em solid hsl(var(--hue),10%,85%);
+	border-bottom: 1em solid transparent;
+	filter: blur(4px);
+	opacity: 0.5;
+	top: 0.6em;
+	left: 0.6em;
+	width: 6.8em;
+	height: 6.8em;
+	transform: rotate(-45deg);
+}
+.camera__lens-glare {
+	animation-name: cameraLensGlare;
+	background-image: radial-gradient(100% 100% at center,hsl(0,0%,100%) 15%,hsla(0,0%,100%,0) 50%);
+	top: 4em;
+	left: 3em;
+	width: 2em;
+	height: 0.875em;
+	transform: rotate(0) translateY(2.5em);
+}
+.camera__lens-eye,
+.camera__lens-eye-shadow {
+	top: 1.5em;
+	left: 1.5em;
+	width: 5em;
+	height: 5em;
+	transform: translateZ(0);
+}
+.camera__lens-eye {
+	background-color: hsl(var(--hue),10%,10%);
+	box-shadow: 0 0 0 0.0625em hsl(var(--hue),10%,10%);
+	overflow: hidden;
+}
+.camera__lens-eye-shadow {
+	box-shadow: 0 0 0.375em 0.25em hsl(var(--hue),10%,50%);
+}
+.camera__lens-eye-ring {
+	animation-name: cameraEyeRing;
+	box-shadow:
+		0 0 0 0.25em hsl(0,0%,0%),
+		0 0 0.25em 0.5em hsl(var(--hue),10%,25%),
+		0 -0.25em 0.25em 0.5em hsl(var(--hue),10%,20%),
+		0 0.2em 0.125em hsl(var(--hue),10%,40%) inset;
+	top: 1em;
+	left: 1em;
+	width: 3em;
+	height: 3em;
+}
+.camera__lens-eye-inner-glare {
+	animation-name: cameraEyeInnerGlare;
+	background-color: hsl(var(--hue),10%,35%);
+	border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+	box-shadow: 0 0 0.375em 0.25em hsl(var(--hue),10%,35%);
+	top: 3em;
+	left: 1.75em;
+	width: 1.5em;
+	height: 0.5em;
+	opacity: 0;
+	transform: scale(0);
+}
+.camera__lens-eye-center {
+	background-image: linear-gradient(hsl(123,90%,5%) 45%,hsl(123,90%,15%) 75%);
+	box-shadow: 0 0 0.125em 0.25em hsl(0,0%,0%);
+	overflow: hidden;
+	top: 2.125em;
+	left: 2.125em;
+	width: 0.75em;
+	height: 0.75em;
+}
+.camera__lens-eye-center-glare {
+	animation-name: cameraEyeCenterGlare;
+	background-color: hsl(123,10%,35%);
+	border-radius: 50%;
+	top: 0;
+	right: 0;
+	width: 0.3em;
+	height: 0.3em;
+}
+.camera__lens-eye-glass {
+	animation-name: cameraEyeGlass;
+	box-shadow:
+		0 -0.1em 0.1em hsl(63,90%,20%) inset,
+		0 0 0.125em hsl(3,90%,20%) inset,
+		0 0 0.125em hsl(263,90%,40%) inset,
+		0 0 0.125em 0.25em hsl(0,0%,0%) inset;
+	width: 100%;
+	height: 100%;
+}
+.camera__lens-eye-glass-color {
+	background-image: linear-gradient(hsla(253,90%,10%,0.5) 60%,hsla(253,90%,40%,0.5) 60%);
+	width: 100%;
+	height: 100%;
+}
+.camera__lens-eye-glare {
+	animation-name: cameraEyeGlare;
+	background-color: hsla(223,90%,60%,0.7);
+	border-radius: 50%;
+	box-shadow: -0.125em 0.375em 0.5em hsl(268,90%,50%) inset;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	transform: translateX(0) rotate(45deg) scaleY(0.45);
+}
+.camera__lens-shadow {
+	background-image: linear-gradient(135deg,hsla(var(--hue),50%,0%,0.25),hsla(var(--hue),50%,0%,0));
+	filter: blur(4px);
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 7em;
+}
+.camera__shadow {
+	background-image: linear-gradient(90deg,hsla(var(--hue),50%,0%,0.5),hsla(var(--hue),50%,0%,0.1));
+	border-radius: 40%;
+	filter: blur(1px);
+	top: calc(100% - 1em);
+	width: 100%;
+	height: 1em;
+	transform: translateZ(-0.01em);
+}
+
+/* Dark icon styles */
+.camera--dark {
+	background-color: hsl(var(--hue),10%,10%);
+}
+.camera--dark .camera__front {
+	background-image: linear-gradient(hsl(var(--hue),10%,15%),hsl(var(--hue),10%,20%));
+	box-shadow: 0 0.1em 0 hsl(var(--hue),10%,25%) inset;
+}
+.camera--dark .camera__red-light {
+	box-shadow:
+		0.1em -0.1em 0.1em 0.1em hsl(3,90%,50%) inset,
+		0 0 0.5em 0.25em hsla(3,90%,50%,0.5);
+}
+.camera--dark .camera__lens-back {
+	background-color: hsl(var(--hue),10%,10%);
+}
+.camera--dark .camera__lens-inner {
+	background-color: hsl(var(--hue),10%,5%);
+}
+.camera--dark .camera__lens-inner-glare1 {
+	box-shadow: 0.5em -1em 0.5em 0.5em hsl(var(--hue),10%,25%) inset;
+}
+.camera--dark .camera__lens-inner-glare2 {
+	border: 1em solid hsl(var(--hue),10%,25%);
+	border-bottom: 1em solid transparent;
+}
+.camera--dark .camera__lens-glare {
+	background-image: radial-gradient(100% 100% at center,hsl(var(--hue),10%,70%) 15%,hsla(var(--hue),10%,70%,0) 50%);
+}
+.camera--dark .camera__lens-eye-shadow {
+	box-shadow: 0 0 0.375em 0.25em hsl(var(--hue),10%,2);
+}
+
+/* Dark page theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,30%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Beyond mobile */
+@media (min-width: 768px) {
+	main {
+		flex-direction: row;
+	}
+}
+
+/* Animations */
+@keyframes camera {
+	from,
+	to {
+		transform: rotateY(20deg);
+	}
+	50% {
+		transform: rotateY(-20deg);
+	}
+}
+@keyframes cameraRedLight {
+	from,
+	to {
+		transform: translateZ(0.6em) rotateY(-20deg);
+	}
+	50% {
+		transform: translateZ(0.6em) rotateY(20deg);
+	}
+}
+@keyframes cameraRingGlare1 {
+	from,
+	to {
+		transform: translateX(-25%) scaleX(0.33);
+	}
+	50% {
+		transform: translateX(0) scaleX(1);
+	}
+}
+@keyframes cameraRingGlare2 {
+	from,
+	to {
+		transform: scale(0.75);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+}
+@keyframes cameraRingGlare3 {
+	from,
+	to {
+		transform: translateX(-20%) scale(0.75);
+	}
+	50% {
+		transform: translateX(0) scale(1.2);
+	}
+}
+@keyframes cameraLensInner {
+	from,
+	to {
+		box-shadow: 0.0625em 0 0 0.125em hsl(var(--hue),10%,50%);
+	}
+	50% {
+		box-shadow: -0.0625em 0 0 0.125em hsl(var(--hue),10%,50%);
+	}
+}
+@keyframes cameraLensInnerGlare1 {
+	from,
+	to {
+		opacity: 1;
+		transform: rotate(0);
+	}
+	50% {
+		opacity: 0;
+		transform: rotate(45deg);
+	}
+}
+@keyframes cameraLensInnerGlare2 {
+	from,
+	to {
+		opacity: 0.2;
+		transform: translate(0,0.2em) scale(1.1) rotate(-45deg);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(0,0) scale(1) rotate(-15deg);
+	}
+}
+@keyframes cameraLensGlare {
+	from,
+	to {
+		transform: rotate(-25deg) translateY(2.5em);
+	}
+	50% {
+		transform: rotate(25deg) translateY(2.5em);
+	}
+}
+@keyframes cameraEyeInnerGlare {
+	from,
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+@keyframes cameraEyeCenterGlare {
+	from,
+	to {
+		transform: translateX(-25%);
+	}
+	50% {
+		transform: translateX(50%);
+	}
+}
+@keyframes cameraEyeGlass {
+	from,
+	to {
+		box-shadow:
+			-0.1em -0.1em 0.1em hsl(63,90%,20%) inset,
+			-0.2em -0.1em 0.125em hsl(3,90%,20%) inset,
+			-0.3em -0.3em 0.125em hsl(263,90%,40%) inset,
+			0 0 0.125em 0.25em hsl(0,0%,0%) inset;
+	}
+	50% {
+		box-shadow:
+			0.1em -0.1em 0.1em hsl(63,90%,20%) inset,
+			0.2em -0.1em 0.125em hsl(3,90%,20%) inset,
+			0.3em -0.3em 0.125em hsl(263,90%,40%) inset,
+			0 0 0.125em 0.25em hsl(0,0%,0%) inset;
+	}
+}
+@keyframes cameraEyeGlare {
+	from,
+	to {
+		transform: translateX(-0.75em) rotate(10deg) scale(1.5,1);
+	}
+	50% {
+		transform: translateX(0.375em) rotate(50deg) scale(1.5,0.25);
+	}
+}
+@keyframes cameraEyeRing {
+	from,
+	to {
+		box-shadow:
+			0 0 0 0.25em hsl(0,0%,0%),
+			0 0.25em 0.25em 0.5em hsl(var(--hue),10%,25%),
+			0 -0.25em 0.25em 0.5em hsl(var(--hue),10%,20%),
+			0 0.2em 0.125em hsl(var(--hue),10%,40%) inset;
+	}
+	50% {
+		box-shadow:
+			0 0 0 0.25em hsl(0,0%,0%),
+			0 0 0.25em 0 hsl(var(--hue),10%,25%),
+			0 -0.25em 0.25em 0.5em hsl(var(--hue),10%,20%),
+			0 0.2em 0.125em hsl(var(--hue),10%,40%) inset;
+	}
+}
+
+
+
+
+
+
+/* GIRLS WHO HAVE SHOPPED W US */
+.mid-maker {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.tag.mid {
+	margin-bottom: 40px;
+	text-align: center;
+}
+.big-h2 {
+	margin-bottom: 24px;
+	font-size: 100px;
+	line-height: 110%;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.button-gradient {
+	margin-top: 40px;
+	padding: 20px 40px;
+	border-style: solid solid none;
+	border-width: 1px;
+	border-color: hsla(0, 0%, 100%, 0.22);
+	border-radius: 100px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6a1cfb), to(#450caf));
+	background-image: linear-gradient(180deg, #6a1cfb, #450caf);
+	box-shadow: 0 0 50px 10px rgba(106, 28, 251, 0.5);
+	-webkit-transition: color 400ms ease, box-shadow 400ms linear;
+	transition: color 400ms ease, box-shadow 400ms linear;
+	font-family: Gilroy, sans-serif;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.button-gradient:hover {
+	box-shadow: 0 0 16px -1px rgba(106, 28, 251, 0.5);
+	color: hsla(0, 0%, 100%, 0.74);
+}
+
+.button-gradient.float {
+	position: relative;
+}
+.purple {
+	color: #6a1cfb;
+}
+.max-500 {
+	max-width: 500px;
+}
+.thumbnails {
+	position: absolute;
+	left: 0%;
+	top: auto;
+	right: 0%;
+	bottom: 0%;
+	overflow: hidden;
+}
+.gradient-black {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(12, 12, 12, 0)));
+	background-image: linear-gradient(0deg, #000, rgba(12, 12, 12, 0));
+}
+.thumbnail-wrapper {
+	display: flex;
+	margin-bottom: 40px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.thumbnail {
+	width: 500px;
+	margin-right: 16px;
+	margin-left: 16px;
+	flex: 0 auto;
+}
+
+
+
+
+
+/* LAELYNN PROMO */
+html {
+    height: 100vh;
+  }
+  
+  body {
+    height: 500vh;
+    background: #000;
+  }
+  
+  canvas {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+
+
+
+
+  /* FOOTER */
+footer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+  }
+  .footertop {
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	padding: 8vh;
+	width: 1500px;
+	justify-content: space-between;
+  }
+  .footmiddlelinks {
+	display: flex;
+	flex-direction: row;
+  }
+  .footertopleft {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  }
+  .topfootermiddle {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+  }
+  .footerbottom {
+	background-color: #151414;
+  }
+  footer p {
+	width: 50vh;
+	color: #878787;
+	font-family: 'Clash Display';
+  }
+  footer h3 {
+	color: white;
+	font-family: 'Clash Display';
+  }
+  .footerlinkheader {
+  margin-left: 15vh;
+  font-family: 'Clash Display';
+  }
+  .footerbottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+  }
+  #footerpicrow {
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	align-items: center;
+  }
+  #Copyrightp {
+	width: 500px;
+	font-family: 'Clash Display';
+	margin-left: 3vh;
+	color: white;
+  }
+  .fmlinks {
+	list-style-type: none;
+	font-family: 'Clash Display';
+  }
+  .fmlinka {
+	text-decoration: none;
+	color: #878787;
+	font-family: 'Clash Display';
+  }
+  .fblinks {
+	text-decoration: none;
+	color: #878787;
+	font-family: 'Clash Display';
+  }
+  #fblinkdiv {
+	margin-right: 4vh;
+  }
+  #fcplogo {
+	width: 19vh;
+	height: 11vh;
+  }
+  #flaelogo {
+	width: 15vh;
+  }
+  .fsociallinks {
+	height: 6vh;
+  }
+  .femailinput {
+	height: 5vh;
+  }
+  .emailform {
+	display: flex;
+	flex-direction: row;
+	height: 6vh;
+  }
+  .emailbutton {
+	height: 100%;
+	width: 5vh;
+	background-color: #f654a5;
+  }
+
+  @font-face {
+	font-family: 'Clash Display';
+	src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c6f81306f5d_ClashDisplay-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Clash Display';
+	src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c2aa4306f5c_ClashDisplay-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Clash Display';
+	src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c48b7306f73_ClashDisplay-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "PP Editorial New Variable";
+	src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/640b5cd3ce1a57e5c200fea6_PPEditorialNew-Variable.ttf")
+	  format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "PP Neue Montreal";
+	src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00bdb6f38c2243257b8_PPNeueMontreal-Medium.otf")
+	  format("opentype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "PP Editorial New";
+	src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00b515eef2d3da68c38_PPEditorialNew-Italic.otf")
+	  format("opentype");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "PP Neue Montreal";
+	src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63e64dd322b40260b55b6df1_PPNeueMontreal-Regular.otf")
+	  format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Gilroy';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addff41de369a8b164d_Gilroy-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Gilroy';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addaa2fae2ff94d95c7_Gilroy-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Gilroy';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addd2fdf143a4cee1aa_Gilroy-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Gilroy';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add6169954bee375878_Gilroy-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Gilroy';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add460b159f899fdd7b_Gilroy-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Montserrat';
+	src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4b108b057e4577184008_Montserrat-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+  }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+@model Product
+<header>
+    @* @await Html.PartialAsync("ProductPartials/_NavBar") *@
+</header>
+
+<body>
+
+    <main>
+
+        <h1>This is the view one product page.</h1>
+
+        <h3>@Model.Name</h3>
+        <h3>@Model.Category</h3>
+        <img class="viewImg" src="@Model.Img1">
+        <img class="viewImg" src="@Model.Img2">
+        <img class="viewImg" src="@Model.Img3">
+        <img class="viewImg" src="@Model.Img4">
+        <img class="viewImg" src="@Model.Img5">
+        <h3>Description: @Model.Description</h3>
+        <h3>Price: $@Model.Price</h3>
+
+        @if (Context.Session.GetInt32("uid") == 1)
+        {
+            <a href="/codepink/edit/@Model.ProductId"><button class="button-56">Edit Product</button></a>
+            <a href="/codepink/delete/@Model.ProductId"><button class="button-56">Delete Product</button></a>
+        }
+
+        <a href="/codepink/products"><button class="button-56">Back to products</button></a>
+
+    </main>
+    <footer>
+        @await Html.PartialAsync("_Footer")
+    </footer>
+</body>
+
+</html>

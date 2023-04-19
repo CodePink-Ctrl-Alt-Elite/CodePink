@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="~/css/laelynn/laelynn.css">
+
+<body>
+    <nav id="topnav">
+        <div id="leftoftopnav">
+            <a href="/"><img id="logo" src="~/images/indeximgs/cplogo.png" alt="logo"></a>
+        </div>
+        <div id="rightoftopnav">
+            <li>
+                <a class="topnava" href="/codepink/laelynn">LAELYNN</a>
+            </li>
+            @if (Context.Session.GetInt32("uid") == null)
+
+
+
+            {
+                <li>
+                    <a class="topnava" href="/codepink/login">STUDENT LOGIN</a>
+                </li>
+
+
+
+            }
+            <li>
+            @* <li class="nav-item dropdown"> *@
+                @* <a href="/codepink/shop" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                    SHOP
+                </a> *@
+                <a href="/codepink/shop" class="topnava">
+                    SHOP
+                </a>
+                @* <ul id="submenu" class="classthree">
+                    <li><a href="/codepink/shop/laptops" class="dropdown-item">Laptops</a></li>
+                    <li><a href="/codepink/shop/monitorsanddesktops" class="dropdown-item">Monitors & Desktops</a></li>
+                    <li><a href="/codepink/shop/tablets" class="dropdown-item">iPads & Tablets</a></li>
+                    <li><a href="/codepink/shop/earphones" class="dropdown-item">Earphones & Earbuds</a></li>
+                    <li><a href="/codepink/shop/techaccessories" class="dropdown-item">Tech Accessories</a></li>
+                    <li><a href="/codepink/shop/furniture" class="dropdown-item">Furniture</a></li>
+                    <li><a href="/codepink/shop/deskaccessories" class="dropdown-item">Desk Accessories</a></li>
+                    </ul> *@
+            </li>
+            <li>
+                <a class="topnava" href="/codepink/reviews">PRODUCT REVIEWS</a>
+            </li>
+            @if (Context.Session.GetInt32("uid") == 1)
+
+
+
+            {
+                <li class="nav-item">
+                    <a class="topnava" asp-area="" asp-controller="Product" asp-action="addpPoduct">ADD
+                        PRODUCT</a>
+                </li>
+
+
+
+            }
+            @if (Context.Session.GetInt32("uid") != null)
+
+
+
+            {
+                <li class="nav-item">
+                    <a class="topnava" asp-area="" asp-controller="User" asp-action="Logout">LOGOUT</a>
+                </li>
+
+
+
+            }
+        </div>
+        <div>
+            <a class="topnava" href="/codepink/cart"><img id="cartimg" src="~/images/navimgs/whitecart.png"
+                    alt="cart"></a>
+        </div>
+    </nav>
+</body>

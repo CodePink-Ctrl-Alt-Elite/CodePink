@@ -1,0 +1,96 @@
+@model User
+<main class="signup">
+    <div class="signupinsidewrapper">
+        <div class="formheader">
+            <h4>EVERYTHING FREE.</h4>
+            <h5>Must have parent or guardian present to sign up.</h5>
+            <h2 class="formtitle">Create a New Account</h2>
+        </div>
+        <form id="signupform" action="">
+            <h1 id="SignUpHeader">Sign Up</h1>
+            <section class="signupsection">
+                <label asp-for="FirstName" class="input-label">First Name</label>
+                <input type="text" name="FirstName" class="input-field">
+                <span asp-validation-for="FirstName"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="LastName" class="input-label">Last Name</label>
+                <input asp-for="LastName" class="input-field">
+                <span asp-validation-for="LastName"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="Nickname" class="input-label">Nickname</label>
+                <input asp-for="Nickname" class="input-field">
+                <span asp-validation-for="Nickname"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="Email" class="input-label">Email <Address></Address></label>
+                <input asp-for="Email" class="input-field">
+                <span asp-validation-for="Email"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="DateOfBirth" class="input-label">Date of Birth</label>
+                <input type="Date" asp-for="DateOfBirth" class="input-field">
+                <span asp-validation-for="DateOfBirth"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="ParentIdImage" class="input-label">School Id Image</label>
+                <input asp-for="ParentIdImage" class="input-field">
+                <span asp-validation-for="ParentIdImage"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="SchoolIdImage" class="input-label">School Id Image</label>
+                <input asp-for="SchoolIdImage" class="input-field">
+                <span asp-validation-for="SchoolIdImage"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="Password" class="input-label">Password</label>
+                <input type="password" asp-for="Password" class="input-field">
+                <span asp-validation-for="Password"></span>
+            </section>
+            <section class="signupsection">
+                <label asp-for="ConfirmPassword" class="input-label">Confirm Password</label>
+                <input type="password" asp-for="ConfirmPassword" class="input-field">
+                <span asp-validation-for="ConfirmPassword"></span>
+            </section>
+            <section>
+                <h4>Courses Interested In -</h4>
+                <input type="checkbox">
+                <label> Java</label><br>
+                <input type="checkbox">
+                <label> C#</label><br>
+                <input type="checkbox">
+                <label> Python</label><br>
+                <input type="checkbox">
+                <label> UI/UX Design</label><br>
+                <input type="checkbox">
+                <label> Data Science</label><br>
+                <input type="checkbox">
+                <label> Cybersecurity</label><br>
+            </section>
+            <div class="sigbody">
+                <div class="flex-row">
+                    <div class="sigwrapper">
+                        <canvas id="signature-pad" width="400" height="200"></canvas>
+                    </div>
+                    <div class="clear-btn">
+                        <button id="clear"><span> Clear </span></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="action-button">Sign Up</button>
+            </div>
+            <section>
+                <p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+            </section>
+        </form>
+        <img class="sulogocorner" src="~/images/laelynnimages/laelynnlogo.png" alt="">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js"
+        integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/laelynn/lae.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</main>

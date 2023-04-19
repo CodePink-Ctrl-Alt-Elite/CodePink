@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/products/shop.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        @await Html.PartialAsync("ProductPartials/_Nav")
+    </header>
+
+    @model Product
+
+
+    <h1 class="viewPup">Edit Product</h1>
+    <form class="shadow p-3" action="/codepink/updateProduct/@Model.ProductId" method="Post">
+
+        <div class="mb-3">
+            <label asp-for="Name">Product Name :</label>
+            <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Name">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category">Category :</label>
+            <span asp-validation-for="Category" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Category">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price">Price :</label>
+            <span asp-validation-for="Price" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Price">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Img1">First Img :</label>
+            <span asp-validation-for="Img1" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Img1">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Img2">Second Img :</label>
+            <span asp-validation-for="Img2" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Img2">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Img3">Third Img :</label>
+            <span asp-validation-for="Img3" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Img3">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Img4">Fourth Img :</label>
+            <span asp-validation-for="Img4" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Img4">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Img5">Fifth Img :</label>
+            <span asp-validation-for="Img5" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Img5">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description">Description of product :</label>
+            <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+            <input class="form-control" asp-for="Description">
+        </div>
+        <button class="button-56">Update Product</button>
+    </form>
+
+
+    <footer>
+        @await Html.PartialAsync("IndexPartials/_Footer")
+    </footer>
+    <script src="~/js/index/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    /* box-sizing: border-box; */
+}
+.divider {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* margin: 30px; */
+}
+header > div {
+    min-height: 30em;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.right-side {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+#myvideo {
+    height: 100%;
+    margin-left: -50vh;
+}
+#video_overlays {
+    position:absolute;
+    min-height: 100%;
+    z-index:300000;
+    margin-left: 70px;
+}
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://w0.peakpx.com/wallpaper/213/47/HD-wallpaper-pinkpurpleblue-blue-gradient-ombre-pastel-pink-purple.jpg");
+    background-size: 1000px;
+}  
+.rightlogo {
+    margin-top: 30px;
+    margin-bottom: -50px;
+}
+.formtitle {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
