@@ -12,7 +12,7 @@
 
         {
             <li>
-                <a href="/codepink/login">STUDENT LOGIN</a>
+                <a href="/codepink/welcome">STUDENT LOGIN</a>
             </li>
 
 
@@ -41,10 +41,8 @@
 
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="addpPoduct">ADD PRODUCT</a>
+                <a href="/codepink/addProduct">ADD PRODUCT</a>
             </li>
-
-
 
         }
         @if (Context.Session.GetInt32("uid") != null)
@@ -55,8 +53,6 @@
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">LOGOUT</a>
             </li>
-
-
 
         }
     </div>

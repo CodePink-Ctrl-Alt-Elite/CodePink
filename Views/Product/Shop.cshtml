@@ -9,9 +9,10 @@
     <title>Document</title>
 </head>
 
+
 <body>
     <header>
-        @await Html.PartialAsync("ProductPartials/_NavBar")
+        @await Html.PartialAsync("ProductPartials/_Nav")
     </header>
 
     @model List<Product>
@@ -36,11 +37,11 @@
     }
 
 
-
-    <footer>
-        @await Html.PartialAsync("IndexPartials/_Footer")
-    </footer>
-    <script src="~/js/index/index.js"></script>
 </body>
+<footer>
+    @await Html.PartialAsync("IndexPartials/_Footer")
+</footer>
+<script src="~/js/index/index.js"></script>
+
 
 </html>
