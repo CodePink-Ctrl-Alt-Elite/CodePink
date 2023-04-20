@@ -31,7 +31,13 @@ public class ProductController : Controller
     [HttpGet("")]
     public IActionResult CodePink()
     {
-        return View("Index");
+        return Redirect("/codepink/laelynn");
+    }
+
+    [HttpGet("/codepink/courses")]
+    public IActionResult Courses()
+    {
+        return View("CourseDashboard");
     }
 
 

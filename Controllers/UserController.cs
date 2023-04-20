@@ -35,8 +35,8 @@ public class UserController : Controller
 
 
 
-    [HttpGet("codepink/courses")]
-    public IActionResult Courses()
+    [HttpGet("codepink/coursedashboard")]
+    public IActionResult CourseDashboard()
     {
         return View("CourseDashboard");
     }
@@ -72,7 +72,7 @@ public class UserController : Controller
     {
         if (!ModelState.IsValid)
         {
-            return View("Laelynn");
+            return Redirect("/register#SignUpForLaelynn");
         }
         else
         {
@@ -84,7 +84,7 @@ public class UserController : Controller
 
             HttpContext.Session.SetInt32("uid", newUser.UserId);
             HttpContext.Session.SetString("name", newUser.FirstName + " " + newUser.LastName);
-            return RedirectToAction("Courses");
+            return RedirectToAction("CourseDashboard");
         }
     }
 
@@ -122,7 +122,7 @@ public class UserController : Controller
         {
             return RedirectToAction("CodePink", "Product");
         }
-        return RedirectToAction("Courses");
+        return RedirectToAction("CourseDashboard");
     }
 
     [HttpGet("/logout")]

@@ -366,6 +366,7 @@ position: relative;
 }
 .wwdimg {
   height: 85vh;
+  width: 100%;
 }
 
 
@@ -1200,41 +1201,6 @@ text {
 
 
 
-/* SIGNATURE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-.signaturesection * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-.flex-row {
-    display: flex;
-}
-.sigwrapper {
-    border: 1px solid #4b00ff;
-    border-right: 0;
-}
-canvas#signature-pad {
-    background: #fff;
-    width: 100%;
-    height: 100%;
-    cursor: crosshair;
-}
-button#clear {
-    height: 100%;
-    background: #4b00ff;
-    border: 1px solid transparent;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-}
-button#clear span {
-    transform: rotate(90deg);
-    display: block;
-} */
-
-
-
-
 /* FOOTER */
 footer {
   display: flex;
@@ -1246,7 +1212,7 @@ footer {
   flex-direction: row;
   background-color: black;
   padding: 8vh;
-  width: 1500px;
+  width: 92.4%;
   justify-content: space-between;
 }
 .footmiddlelinks {

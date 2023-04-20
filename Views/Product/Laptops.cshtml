@@ -10,8 +10,9 @@
 <body>
     <header>
         @await Html.PartialAsync("ProductPartials/_NavBar")
+        <img class="productbanner" src="~/images/productimgs/b1.png" alt="">
     </header>
-    <main>
+    <main class="productbody">
 @model List<Product>
 <body>
     @{
@@ -20,7 +21,7 @@
         {
             foreach(Product p in Model) 
             {
-                <div class="productcard">
+                <div class="box">
                     <img class="prodimg1" src="@p.Img1" alt="Post Image">
                     <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
                     <h5>Price: @p.Price</h5>
