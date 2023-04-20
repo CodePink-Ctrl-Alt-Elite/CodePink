@@ -18,7 +18,7 @@ public class User
     [MinLength(2, ErrorMessage = "Last name needs to be at least 2 characters.")]
     public string LastName { get; set; }
 
-
+    [Required]
     public string Nickname { get; set; }
 
     [Required]

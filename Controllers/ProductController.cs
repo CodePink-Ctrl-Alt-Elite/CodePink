@@ -60,30 +60,35 @@ public class ProductController : Controller
     [HttpGet("/codepink/shop/monitorsanddesktops")]
     public IActionResult Monitors()
     {
-        return View("Monitors");
+        List<Product> Monitor = db.Products.Where(p => p.Category == "Laptops").ToList();
+        return View("Monitors", Monitor);
     }
 
     [HttpGet("/codepink/shop/tablets")]
     public IActionResult Tablets()
     {
-        return View("IPads");
+        List<Product> Tablet = db.Products.Where(p => p.Category == "Laptops").ToList();
+        return View("IPads", Tablet);
     }
 
     [HttpGet("/codepink/shop/furniture")]
     public IActionResult Furniture()
     {
-        return View("Furniture");
+        List<Product> Furniture = db.Products.Where(p => p.Category == "Furniture").ToList();
+        return View("Furniture", Furniture);
     }
 
     [HttpGet("/codepink/shop/deskaccessories")]
     public IActionResult DeskAccessories()
     {
-        return View("DeskAccessories");
+        List<Product> DeskAccessory = db.Products.Where(p => p.Category == "Desk Accessories").ToList();
+        return View("DeskAccessories", DeskAccessory);
     }
 
     [HttpGet("/codepink/shop/earphones")]
     public IActionResult Earphones()
     {
+        List<Product> Earphone = db.Products.Where(p => p.Category == "Laptops").ToList();
         return View("Earphones");
     }
 
@@ -91,10 +96,9 @@ public class ProductController : Controller
     [HttpGet("/codepink/shop/techaccessories")]
     public IActionResult TechA()
     {
-        return View("TechAccessories");
+        List<Product> TechAccessory = db.Products.Where(p => p.Category == "Tech Accessories").ToList();
+        return View("TechAccessories", TechAccessory);
     }
-
-
 
 
 

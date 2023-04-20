@@ -34,6 +34,7 @@ header {
   align-items: center;
   justify-content: flex-end;
 }
+
 #topcplogoimg {
   height: 4vh;
   margin-left: 3vh;
@@ -53,8 +54,31 @@ header {
 #cartimg {
   height: 25px;
 }
-
-
+#submenu {
+  /* left: 0;
+  right: 0; */
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  visibility: hidden;
+  z-index: 1;
+  list-style-type: none;
+}
+#submenu li {
+  float: none;
+  width: 170%;
+  margin-left: -80px;
+  text-align: center;
+  margin-top: 3vh;
+}
+li:hover ul#submenu {
+  opacity: 1;
+  top: 50px;
+  visibility: visible;
+}
+#snavbardrop {
+  margin-bottom: -20px;
+}
 
 /*LAENAV*/
 #laenav {
@@ -1182,7 +1206,6 @@ text {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
 .flex-row {
     display: flex;
 }
@@ -1410,6 +1433,8 @@ font-family: 'Clash Display';
   font-style: normal;
   font-display: swap;
 }
+
+
 
 
 .top-link {

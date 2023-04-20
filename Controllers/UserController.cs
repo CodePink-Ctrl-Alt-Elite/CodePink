@@ -35,10 +35,10 @@ public class UserController : Controller
 
 
 
-    [HttpGet("codepink/comingsoon")]
-    public IActionResult ComingSoon()
+    [HttpGet("codepink/courses")]
+    public IActionResult Courses()
     {
-        return View("ComingSoon");
+        return View("CourseDashboard");
     }
 
     [HttpGet("/codepink/login")]
@@ -51,6 +51,19 @@ public class UserController : Controller
         else
         {
             return View("Login");
+        }
+    }
+
+    [HttpGet("register")]
+    public IActionResult Register()
+    {
+        if (HttpContext.Session.GetInt32("uid") != null)
+        {
+            return Redirect("/register#SignUpForLaelynn");
+        }
+        else
+        {
+            return View("Laelynn");
         }
     }
 
@@ -71,7 +84,7 @@ public class UserController : Controller
 
             HttpContext.Session.SetInt32("uid", newUser.UserId);
             HttpContext.Session.SetString("name", newUser.FirstName + " " + newUser.LastName);
-            return RedirectToAction("ComingSoon");
+            return RedirectToAction("Courses");
         }
     }
 
@@ -109,7 +122,7 @@ public class UserController : Controller
         {
             return RedirectToAction("CodePink", "Product");
         }
-        return RedirectToAction("ComingSoon");
+        return RedirectToAction("Courses");
     }
 
     [HttpGet("/logout")]
