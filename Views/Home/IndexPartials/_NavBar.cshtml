@@ -6,11 +6,16 @@
         <li>
             <a href="/codepink/laelynn">LAELYNN</a>
         </li>
-        <li>
-            <a href="/welcome">STUDENT LOGIN</a>
-        </li>
+        @if (Context.Session.GetInt32("uid") == null)
+
+        {
+            <li>
+                <a href="/codepink/login">STUDENT LOGIN</a>
+            </li>
+
+        }
         <li class="nav-item dropdown">
-            <a href="codepink/shop" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+            <a href="/codepink/shop" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                 SHOP
             </a>
             <ul id="submenu" class="classthree">
@@ -28,42 +33,18 @@
         </li>
         @if (Context.Session.GetInt32("uid") == 1)
 
-
-
-
-
-
-
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Add Product">Add Product</a>
+                <a href="/codepink/addproduct">ADD PRODUCT</a>
             </li>
-
-
-
-
-
-
 
         }
         @if (Context.Session.GetInt32("uid") != null)
 
-
-
-
-
-
-
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+                <a class="nav-link" href="/logout">LOGOUT</a>
             </li>
-
-
-
-
-
-
 
         }
     </div>

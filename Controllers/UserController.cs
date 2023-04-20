@@ -35,12 +35,18 @@ public class UserController : Controller
 
 
 
-    [HttpGet("/welcome")]
-    public IActionResult Welcome()
+    [HttpGet("codepink/comingsoon")]
+    public IActionResult ComingSoon()
+    {
+        return View("ComingSoon");
+    }
+
+    [HttpGet("/codepink/login")]
+    public IActionResult Login()
     {
         if (HttpContext.Session.GetInt32("uid") != null)
         {
-            return RedirectToAction("CodePink", "Product");
+            return RedirectToAction("Index", "Product");
         }
         else
         {
@@ -65,7 +71,7 @@ public class UserController : Controller
 
             HttpContext.Session.SetInt32("uid", newUser.UserId);
             HttpContext.Session.SetString("name", newUser.FirstName + " " + newUser.LastName);
-            return RedirectToAction("CodePink", "Product");
+            return RedirectToAction("ComingSoon");
         }
     }
 
@@ -99,8 +105,11 @@ public class UserController : Controller
 
         // Handle success (this should route to an internal page)  
         HttpContext.Session.SetInt32("uid", userInDb.UserId);
-
-        return RedirectToAction("CodePink", "Product");
+        if (HttpContext.Session.GetInt32("uid") == 1)
+        {
+            return RedirectToAction("CodePink", "Product");
+        }
+        return RedirectToAction("ComingSoon");
     }
 
     [HttpGet("/logout")]

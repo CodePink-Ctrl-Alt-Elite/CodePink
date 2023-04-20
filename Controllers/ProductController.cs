@@ -28,13 +28,18 @@ public class ProductController : Controller
 
 
 
-    [HttpGet("/codepink")]
+    [HttpGet("")]
     public IActionResult CodePink()
     {
         return View("Index");
     }
 
 
+    [HttpGet("/codepink/reviews")]
+    public IActionResult Reviews()
+    {
+        return View("Reviews");
+    }
 
     [HttpGet("/codepink/shop")]
     public IActionResult AllProducts()
@@ -44,6 +49,54 @@ public class ProductController : Controller
 
         return View("Shop", addedProducts);
     }
+
+    [HttpGet("/codepink/shop/laptops")]
+    public IActionResult Laptops()
+    {
+        List<Product> Laptop = db.Products.Where(p => p.Category == "Laptops").ToList();
+        return View("Laptops", Laptop);
+    }
+
+    [HttpGet("/codepink/shop/monitorsanddesktops")]
+    public IActionResult Monitors()
+    {
+        return View("Monitors");
+    }
+
+    [HttpGet("/codepink/shop/tablets")]
+    public IActionResult Tablets()
+    {
+        return View("IPads");
+    }
+
+    [HttpGet("/codepink/shop/furniture")]
+    public IActionResult Furniture()
+    {
+        return View("Furniture");
+    }
+
+    [HttpGet("/codepink/shop/deskaccessories")]
+    public IActionResult DeskAccessories()
+    {
+        return View("DeskAccessories");
+    }
+
+    [HttpGet("/codepink/shop/earphones")]
+    public IActionResult Earphones()
+    {
+        return View("Earphones");
+    }
+
+
+    [HttpGet("/codepink/shop/techaccessories")]
+    public IActionResult TechA()
+    {
+        return View("TechAccessories");
+    }
+
+
+
+
 
     [HttpGet("/codepink/{productId}")]
     public IActionResult ViewOne(int productId)
@@ -75,7 +128,6 @@ public class ProductController : Controller
     [HttpPost("/codepink/createProduct")]
     public IActionResult CreateProduct(Product p)
     {
-        // p.UserId = (int)HttpContext.Session.GetInt32("uid");
         p.UserId = 1;
         if (ModelState.IsValid)
         {
@@ -161,9 +213,6 @@ public class ProductController : Controller
         {
             Console.WriteLine("Not added to cart");
             return RedirectToAction("AllProducts");
-            // Console.BackgroundColor = ConsoleColor.Black;
-            // Console.ForegroundColor = ConsoleColor.Red;
-            // Console.WriteLine("FAIL.");
         }
 
         dbProduct.AddToCart = true;

@@ -7,7 +7,7 @@
                 <h5>Must have parent or guardian present to sign up.</h5>
                 <h2 class="formtitle">Create a New Account</h2>
             </div>
-            <form id="signupform" action="">
+            <form id="signupform" asp-controller="User" asp-action="Register" method="post">
                 <h1 id="SignUpHeader">Sign Up</h1>
                 <section class="signupsection">
                     <label asp-for="FirstName" class="input-label">First Name</label>
@@ -25,7 +25,7 @@
                     <span asp-validation-for="Nickname"></span>
                 </section>
                 <section class="signupsection">
-                    <label asp-for="Email" class="input-label">Email <Address></Address></label>
+                    <label asp-for="Email" class="input-label">Email</label>
                     <input asp-for="Email" class="input-field">
                     <span asp-validation-for="Email"></span>
                 </section>
@@ -35,7 +35,7 @@
                     <span asp-validation-for="DateOfBirth"></span>
                 </section>
                 <section class="signupsection">
-                    <label asp-for="ParentIdImage" class="input-label">School Id Image</label>
+                    <label asp-for="ParentIdImage" class="input-label">Parent Id Image</label>
                     <input asp-for="ParentIdImage" class="input-field">
                     <span asp-validation-for="ParentIdImage"></span>
                 </section>

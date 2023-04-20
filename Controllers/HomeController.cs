@@ -19,17 +19,6 @@ public class HomeController : Controller
     }
 
 
-    [HttpGet("")]
-    public IActionResult Home()
-    {
-        if (HttpContext.Session.GetInt32("uid") != null)
-        {
-            return RedirectToAction("CodePink", "Product");
-        }
-        return View("Index");
-    }
-
-
     public IActionResult Privacy()
     {
         return View();

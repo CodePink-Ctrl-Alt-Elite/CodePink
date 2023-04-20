@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/products/shop.css">
+    <link rel="stylesheet" href="~/css/products/laptops.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        @await Html.PartialAsync("ProductPartials/_Nav")
+        @await Html.PartialAsync("ProductPartials/_NavBar")
     </header>
     <main>
 @model List<Product>
-
-<div>
-    <h1 class="catheader">LAPTOPS</h1>
-
-@{
+<body>
+    @{
+        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        if(Context.Session.GetInt32("uid") == 1) 
+        {
             foreach(Product p in Model) 
             {
-                if(@p.Category == "Laptops") 
-        {
                 <div class="productcard">
                     <img class="prodimg1" src="@p.Img1" alt="Post Image">
                     <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
@@ -34,34 +32,21 @@
                         </form>
                     </div>
                 </div>             
-            }
-            }
-}
-</div>
-    <div>
-        <h1 class="catheader">MONITORS & DESKTOPS</h1>
-        @{
-        foreach(Product p in Model) 
-            {
-                if(@p.Category == "Headphones") 
-        {
-                <div class="productcard">
-                    <img class="prodimg1" src="@p.Img1" alt="Post Image">
-                    <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
-                    <h5>Price: @p.Price</h5>
-                    <button class="btn" onclick="buttonClick()">Add To Cart</button>
-                    <div id="editanddeletedashboard">
-                        <a href="/product/@p.ProductId/edit" class="dashbutton" >Edit</a>
-                        <form asp-action="Deletesweet" asp-route-Productid="@p.ProductId" asp-controller="Admin" method="post">
-                        <input type="submit" value="Delete">
-                        </form>
-                    </div>
-                </div>             
-            }
             }
         }
-        </div>
-
+        else {
+            foreach(Product p in Model) 
+        {
+                <div class="productcard">
+                    <img class="prodimg1" src="@p.Img1" alt="Post Image">
+                    <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
+                    <h5>Price: @p.Price</h5>
+                    <button class="btn" onclick="buttonClick()">Add To Cart</button>
+            </div>
+        }
+    }
+    }    
+</body>
     </main>
     <footer>
         @await Html.PartialAsync("ProductPartials/_Footer")

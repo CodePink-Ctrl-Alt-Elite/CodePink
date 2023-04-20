@@ -1,39 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/laelynn/login.css">
+    <title>Document</title>
+</head>
 @model LoginUser
-<link rel="stylesheet" href="~/css/laelynn/login.css">
 
 <body>
+    <header>
 
-
-
-    <div class="divider">
-        <div class="right-side">
-            <a href="/"><img id="video_overlays" src="~/images/laelynnimages/laelynnlogo.png" alt="you're in words"></a>
-            <video id="myvideo" src="~/videos/login.mov" autoplay muted loop></video>
-        </div>
-        <div class="left-side">
-            <div class="formdivy">
-                <form action="Login" method="post" class="card-form">
-                    <h2 class="text-center font-up font-bold py-4 white-text">Sign in</h2>
-                    <div class="md-form">
-                        <i class="fa fa-envelope prefix white-text"></i>
-                        <input type="text" id="orangeForm-email2" asp-for="LoginEmail" class="form-control">
-                        <label asp-for="LoginEmail">Your email</label>
-                        <span asp-validation-for="LoginEmail"></span>
-                    </div>
-                    <div class="md-form">
-                        <i class="fa fa-lock prefix white-text"></i>
-                        <input type="password" id="orangeForm-pass2" asp-for="LoginPassword" class="form-control">
-                        <label asp-for="LoginPassword">Your password</label>
-                        <span asp-validation-for="LoginPassword"></span>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-outline-white waves-effect waves-light">LOGIN</button>
-                    </div>
-                    <h3 class="signupinstead">Not a student yet? <a href="/codepink/laelynn/#SignUp">Sign Up</a></h3>
-                </form>
+    </header>
+    <main>
+        <form action="/login" method="post" class="card-form">
+            <h2 class="text-center font-up font-bold py-4 white-text">Sign up</h2>
+            <div class="md-form">
+                <i class="fa fa-envelope prefix white-text"></i>
+                <input type="text" id="orangeForm-email2" asp-for="LoginEmail" class="form-control">
+                <label asp-for="LoginEmail">Your email</label>
+                <span asp-validation-for="LoginEmail"></span>
             </div>
-        </div>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <div class="md-form">
+                <i class="fa fa-lock prefix white-text"></i>
+                <input type="password" id="orangeForm-pass2" asp-for="LoginPassword" class="form-control">
+                <label asp-for="LoginPassword">Your password</label>
+                <span asp-validation-for="LoginPassword"></span>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-white waves-effect waves-light">LOGIN</button>
+            </div>
+            <h3 class="signupinstead">Not a student yet? <a href="/codepink/laelynn/#SignUpForLaelynn">Sign Up</a></h3>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
+</html>

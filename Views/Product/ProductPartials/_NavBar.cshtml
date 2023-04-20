@@ -6,9 +6,14 @@
         <li>
             <a href="/codepink/laelynn">LAELYNN</a>
         </li>
-        <li>
-            <a href="/codepink/welcome">STUDENT LOGIN</a>
-        </li>
+        @if (Context.Session.GetInt32("uid") == null)
+
+        {
+            <li>
+                <a href="/codepink/login">STUDENT LOGIN</a>
+            </li>
+
+        }
         <li class="nav-item dropdown">
             <a href="/codepink/shop" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                 SHOP
@@ -26,8 +31,24 @@
         <li>
             <a href="/codepink/reviews">PRODUCT REVIEWS</a>
         </li>
+        @if (Context.Session.GetInt32("uid") == 1)
+
+        {
+            <li class="nav-item">
+                <a href="/codepink/addproduct">ADD PRODUCT</a>
+            </li>
+
+        }
+        @if (Context.Session.GetInt32("uid") != null)
+
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">LOGOUT</a>
+            </li>
+
+        }
     </div>
-    <div>
+    <div class="rightofn">
         <a href="/codepink/cart"><img id="cartimg" src="~/images/navimgs/whitecart.png" alt="cart"></a>
     </div>
 </nav>
