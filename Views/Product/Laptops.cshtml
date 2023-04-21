@@ -1,34 +1,21 @@
-@await Html.PartialAsync("ProductPartials/_NavBar")
-
-<img class="productbanner" src="~/images/productimgs/b1.png" alt="">
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/products/laptops.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("ProductPartials/_NavBar")
+        <img class="productbanner" src="~/images/productimgs/b1.png" alt="">
+    </header>
+    <main class="productbody">
 @model List<Product>
 <body>
-    <main class="productbody">
     @{
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        if(Context.Session.GetInt32("uid") == 1) 
-        {
-            foreach(Product p in Model) 
-            {
-                <div class="productcard">
-                    <img class="prodimg1" src="@p.Img1" alt="Post Image">
-                    <div class="pricenamerow">
-                        <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
-                        <h5>$@p.Price</h5>
-                    </div>
-                        <form asp-controller="Product" asp-action="AddToCart" asp-route-id="@p.ProductId">
-                            <button class="atcbutton" onclick="buttonClick()">Add To Cart</button>
-                        </form>
-                    @* <div id="editanddeletedashboard">
-                    <a href="/codepink/edit/@p.ProductId"><button class="button-56">Edit Product</button></a>
-                    <a href="/codepink/delete/@p.ProductId"><button class="button-56">Delete Product</button></a>
-                    </div> *@
-                </div>             
-            }
-        }
-        else {
             foreach(Product p in Model) 
         {
                 <div class="productcard">
@@ -38,14 +25,15 @@
                         <h5>$@p.Price</h5>
                     </div>
                     <form asp-controller="Product" asp-action="AddToCart" asp-route-id="@p.ProductId">
-                        <button class="atcbutton" onclick="buttonClick()">Add To Cart</button>
-                    </form>
+                            <button class="atcbutton" onclick="buttonClick()">Add To Cart</button>
+                        </form>
             </div>
         }
     }
-    } 
-    </main>   
 </body>
-<footer>
+    </main>
+    <footer>
         @await Html.PartialAsync("ProductPartials/_Footer")
-</footer>
+    </footer>
+</body>
+</html>

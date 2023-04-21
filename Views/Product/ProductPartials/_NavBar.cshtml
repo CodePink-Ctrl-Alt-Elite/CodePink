@@ -8,14 +8,10 @@
         </li>
         @if (Context.Session.GetInt32("uid") == null)
 
-
-
         {
             <li>
                 <a href="/codepink/login">STUDENT LOGIN</a>
             </li>
-
-
 
         }
         <li class="nav-item dropdown">
@@ -26,37 +22,28 @@
                 <li><a href="/codepink/shop/laptops" class="dropdown-item">Laptops</a></li>
                 <li><a href="/codepink/shop/monitorsanddesktops" class="dropdown-item">Monitors & Desktops</a></li>
                 <li><a href="/codepink/shop/tablets" class="dropdown-item">iPads & Tablets</a></li>
-                <li><a href="/codepink/shop/earphones" class="dropdown-item">Earphones & Earbuds</a></li>
-                @* <li><a href="/codepink/shop/furniture" class="dropdown-item">Zoom Kits</a></li> *@
-                <li><a href="/codepink/shop/accessories" class="dropdown-item">Desk & Tech Accessories</a></li>
-                <li><a href="/codepink/shop/furniture" class="dropdown-item">Furniture</a></li>
+                <li><a href="/codepink/shop/earphones" id="eardd" class="dropdown-item">Earphones & Earbuds</a></li>
+                <li id="accdd"><a href="/codepink/shop/accessories" class="dropdown-item">Tech Accessories</a></li>
+                <li><a href="/codepink/shop/furniture" id="furndd" class="dropdown-item">Furniture</a></li>
             </ul>
         </li>
-        @* <li>
+        <li>
             <a href="/codepink/reviews">PRODUCT REVIEWS</a>
-            </li> *@
+        </li>
         @if (Context.Session.GetInt32("uid") == 1)
-
-
 
         {
             <li class="nav-item">
                 <a href="/codepink/addproduct">ADD PRODUCT</a>
             </li>
 
-
-
         }
         @if (Context.Session.GetInt32("uid") != null)
-
-
 
         {
             <li class="nav-item">
                 <a class="nav-link" href="/logout">LOGOUT</a>
             </li>
-
-
 
         }
     </div>
