@@ -1,28 +1,39 @@
 body {
   background-color: #0f0f12;
   width: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
+margin: 0;
+font-family: Arial, sans-serif;
 }
+
+
 /* COOKIE POPUP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
 /* TWIST */
 .twistcontainer {
-  margin-top: 40vh;
-  margin-bottom: 100vh;
-  height: 100%;
+margin-top: 40vh;
+margin-bottom: 100vh;
+height: 100%;
 }
 .twistcontainer p {
-  color: white;
-  font-size: 150px;
-  font-family: "PP Editorial New";
-  font-style: italic;
-  line-height: 120px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  transition: opacity 1s;
-  opacity: 0;
+color: white;
+font-size: 150px;
+
+font-family: "PP Editorial New";
+font-style: italic;
+line-height: 120px;
+text-transform: uppercase;
+text-align: center;
+margin: 0;
+transition: opacity 1s;
+opacity: 0;
+
 }
+
+
 /*****NAV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!****/
 nav {
   display: flex;
@@ -30,30 +41,30 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   height: 30px;
-  margin-top: 5vh;
-  margin-bottom: 100px;
-  align-items: flex-start;
+margin-top: 5vh;
+margin-bottom: 100px;
+align-items: flex-start;
 }
 nav div a {
   color: white;
-  font-family: 'Clash Display';
-  font-weight: bold;
-  text-decoration: none;
+font-family: 'Clash Display';
+font-weight: bold;
+text-decoration: none;
 }
 #cartimg {
-  height: 4vh;
+height: 4vh;
 }
 #logo {
-  height: 10vh;
-  width: 22vh;
+height: 10vh;
+width: 22vh;
 }
 .middleofnav {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
 }
 #submenu {
   /* left: 0;
-    right: 0; */
+  right: 0; */
   opacity: 0;
   position: absolute;
   top: 35px;
@@ -66,303 +77,331 @@ nav div a {
   width: 170%;
   margin-left: -70px;
   text-align: center;
-  margin-top: 3vh;
+margin-top: 3vh;
 }
 li:hover ul#submenu {
   opacity: 1;
   top: 50px;
   visibility: visible;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 /* GIRLS WHO HAVE SHOPPED W US
 .mid-maker {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .tag.mid {
-	margin-bottom: 40px;
-	text-align: center;
+margin-bottom: 40px;
+text-align: center;
 }
 .big-h2 {
-	margin-bottom: 24px;
-	font-size: 100px;
-	line-height: 110%;
-	font-weight: 900;
-	text-transform: uppercase;
+margin-bottom: 24px;
+font-size: 100px;
+line-height: 110%;
+font-weight: 900;
+text-transform: uppercase;
 }
 .button-gradient {
-	margin-top: 40px;
-	padding: 20px 40px;
-	border-style: solid solid none;
-	border-width: 1px;
-	border-color: hsla(0, 0%, 100%, 0.22);
-	border-radius: 100px;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#6a1cfb), to(#450caf));
-	background-image: linear-gradient(180deg, #6a1cfb, #450caf);
-	box-shadow: 0 0 50px 10px rgba(106, 28, 251, 0.5);
-	-webkit-transition: color 400ms ease, box-shadow 400ms linear;
-	transition: color 400ms ease, box-shadow 400ms linear;
-	font-family: Gilroy, sans-serif;
-	color: #fff;
-	font-weight: 700;
-	text-align: center;
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: uppercase;
+margin-top: 40px;
+padding: 20px 40px;
+border-style: solid solid none;
+border-width: 1px;
+border-color: hsla(0, 0%, 100%, 0.22);
+border-radius: 100px;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#6a1cfb), to(#450caf));
+background-image: linear-gradient(180deg, #6a1cfb, #450caf);
+box-shadow: 0 0 50px 10px rgba(106, 28, 251, 0.5);
+-webkit-transition: color 400ms ease, box-shadow 400ms linear;
+transition: color 400ms ease, box-shadow 400ms linear;
+font-family: Gilroy, sans-serif;
+color: #fff;
+font-weight: 700;
+text-align: center;
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: uppercase;
 }
 .button-gradient:hover {
-	box-shadow: 0 0 16px -1px rgba(106, 28, 251, 0.5);
-	color: hsla(0, 0%, 100%, 0.74);
+box-shadow: 0 0 16px -1px rgba(106, 28, 251, 0.5);
+color: hsla(0, 0%, 100%, 0.74);
 }
+
 .button-gradient.float {
-	position: relative;
+position: relative;
 }
 .purple {
-	color: #6a1cfb;
+color: #6a1cfb;
 }
 .max-500 {
-	max-width: 500px;
+max-width: 500px;
 }
 .thumbnails {
-	position: absolute;
-	left: 0%;
-	top: auto;
-	right: 0%;
-	bottom: 0%;
-	overflow: hidden;
+position: absolute;
+left: 0%;
+top: auto;
+right: 0%;
+bottom: 0%;
+overflow: hidden;
 }
 .gradient-black {
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(12, 12, 12, 0)));
-	background-image: linear-gradient(0deg, #000, rgba(12, 12, 12, 0));
+position: absolute;
+left: 0%;
+top: 0%;
+right: 0%;
+bottom: 0%;
+background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(12, 12, 12, 0)));
+background-image: linear-gradient(0deg, #000, rgba(12, 12, 12, 0));
 }
 .thumbnail-wrapper {
-	display: flex;
-	margin-bottom: 40px;
-	flex-direction: row;
-	justify-content: space-between;
+display: flex;
+margin-bottom: 40px;
+flex-direction: row;
+justify-content: space-between;
 }
 .thumbnail {
-	width: 500px;
-	margin-right: 16px;
-	margin-left: 16px;
-	flex: 0 auto;
+width: 500px;
+margin-right: 16px;
+margin-left: 16px;
+flex: 0 auto;
 }
- */
+*/
+
+
+
+
 /* LAELYNN PROMO */
 /* html {
-    height: 100vh;
-  }
-  
-  body {
-    height: 500vh;
-    background: #000;
-  }
-  
-  canvas {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100vw;
-    max-height: 100vh;
-  } */
+  height: 100vh;
+}
+
+body {
+  height: 500vh;
+  background: #000;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+} */
+
+
+
+
+
 /* FOOTER */
 footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
+display: flex;
+flex-direction: column;
+width: 100%;
+position: absolute;
+
 }
 .footertop {
-  display: flex;
-  flex-direction: row;
-  background-color: black;
-  padding: 8vh;
-  width: 1500px;
-  justify-content: space-between;
-  margin-top: 50vh;
+display: flex;
+flex-direction: row;
+background-color: black;
+padding: 8vh;
+width: 1500px;
+justify-content: space-between;
+margin-top: 50vh;
 }
 .footmiddlelinks {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
 }
 .footertopleft {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 }
 .topfootermiddle {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
+display: flex;
+flex-direction: column;
+width: 500px;
 }
 .footerbottom {
-  background-color: #151414;
+background-color: #151414;
 }
 footer p {
-  width: 50vh;
-  color: #878787;
-  font-family: 'Clash Display';
+width: 50vh;
+color: #878787;
+font-family: 'Clash Display';
 }
 footer h3 {
-  color: white;
-  font-family: 'Clash Display';
+color: white;
+font-family: 'Clash Display';
 }
 .footerlinkheader {
-  margin-left: 15vh;
-  font-family: 'Clash Display';
+margin-left: 15vh;
+font-family: 'Clash Display';
 }
 .footerbottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 }
 #footerpicrow {
-  display: flex;
-  flex-direction: row;
-  width: 400px;
-  align-items: center;
+display: flex;
+flex-direction: row;
+width: 400px;
+align-items: center;
 }
 #Copyrightp {
-  width: 500px;
-  font-family: 'Clash Display';
-  margin-left: 3vh;
-  color: white;
+width: 500px;
+font-family: 'Clash Display';
+margin-left: 3vh;
+color: white;
 }
 .fmlinks {
-  list-style-type: none;
-  font-family: 'Clash Display';
+list-style-type: none;
+font-family: 'Clash Display';
 }
 .fmlinka {
-  text-decoration: none;
-  color: #878787;
-  font-family: 'Clash Display';
+text-decoration: none;
+color: #878787;
+font-family: 'Clash Display';
 }
 .fblinks {
-  text-decoration: none;
-  color: #878787;
-  font-family: 'Clash Display';
+text-decoration: none;
+color: #878787;
+font-family: 'Clash Display';
 }
 #fblinkdiv {
-  margin-right: 4vh;
+margin-right: 4vh;
 }
 #fcplogo {
-  width: 19vh;
-  height: 11vh;
+width: 19vh;
+height: 11vh;
 }
 #flaelogo {
-  width: 15vh;
+width: 15vh;
 }
 .fsociallinks {
-  height: 6vh;
+height: 6vh;
 }
 .femailinput {
-  height: 5vh;
+height: 5vh;
 }
 .emailform {
-  display: flex;
-  flex-direction: row;
-  height: 6vh;
+display: flex;
+flex-direction: row;
+height: 6vh;
 }
 .emailbutton {
-  height: 100%;
-  width: 5vh;
-  background-color: #f654a5;
+height: 100%;
+width: 5vh;
+background-color: #f654a5;
+}
+
+@font-face {
+font-family: 'Clash Display';
+src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c6f81306f5d_ClashDisplay-Medium.otf') format('opentype');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Clash Display';
-  src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c6f81306f5d_ClashDisplay-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Clash Display';
+src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c2aa4306f5c_ClashDisplay-Bold.otf') format('opentype');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Clash Display';
-  src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c2aa4306f5c_ClashDisplay-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Clash Display';
+src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c48b7306f73_ClashDisplay-Regular.otf') format('opentype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Clash Display';
-  src: url('https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c48b7306f73_ClashDisplay-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+font-family: "PP Editorial New Variable";
+src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/640b5cd3ce1a57e5c200fea6_PPEditorialNew-Variable.ttf")
+  format("truetype");
+font-weight: 100 900;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: "PP Editorial New Variable";
-  src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/640b5cd3ce1a57e5c200fea6_PPEditorialNew-Variable.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+font-family: "PP Neue Montreal";
+src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00bdb6f38c2243257b8_PPNeueMontreal-Medium.otf")
+  format("opentype");
+font-weight: 500;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: "PP Neue Montreal";
-  src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00bdb6f38c2243257b8_PPNeueMontreal-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+font-family: "PP Editorial New";
+src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00b515eef2d3da68c38_PPEditorialNew-Italic.otf")
+  format("opentype");
+font-weight: 400;
+font-style: italic;
+font-display: swap;
 }
 @font-face {
-  font-family: "PP Editorial New";
-  src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63dbd00b515eef2d3da68c38_PPEditorialNew-Italic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+font-family: "PP Neue Montreal";
+src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63e64dd322b40260b55b6df1_PPNeueMontreal-Regular.otf")
+  format("opentype");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: "PP Neue Montreal";
-  src: url("https://assets.website-files.com/63dbcb270006fb086fcc5eef/63e64dd322b40260b55b6df1_PPNeueMontreal-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Gilroy';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addff41de369a8b164d_Gilroy-Heavy.ttf') format('truetype');
+font-weight: 900;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addff41de369a8b164d_Gilroy-Heavy.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Gilroy';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addaa2fae2ff94d95c7_Gilroy-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addaa2fae2ff94d95c7_Gilroy-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Gilroy';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addd2fdf143a4cee1aa_Gilroy-Light.ttf') format('truetype');
+font-weight: 300;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4addd2fdf143a4cee1aa_Gilroy-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Gilroy';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add6169954bee375878_Gilroy-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add6169954bee375878_Gilroy-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Gilroy';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add460b159f899fdd7b_Gilroy-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4add460b159f899fdd7b_Gilroy-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4b108b057e4577184008_Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+font-family: 'Montserrat';
+src: url('https://assets.website-files.com/5fba4a758b057e1a0a183c74/5fba4b108b057e4577184008_Montserrat-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
 }

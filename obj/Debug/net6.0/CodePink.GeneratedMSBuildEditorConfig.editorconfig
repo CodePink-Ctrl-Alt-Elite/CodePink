@@ -55,6 +55,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/Accessories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBY2Nlc3Nvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/AddOne.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRPbmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -143,8 +147,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UGFydGlhbHNcX05hdkJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/ProductPartials/_TopNavCourses.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UGFydGlhbHNcX1RvcE5hdkNvdXJzZXMuY3NodG1s
+[C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/ProductPartials/_TopNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UGFydGlhbHNcX1RvcE5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/Reviews.cshtml]
@@ -153,10 +157,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaG9wLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/TechAccessories.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxUZWNoQWNjZXNzb3JpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/Product/ViewOne.cshtml]
@@ -173,6 +173,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/User/CourseDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb3Vyc2VEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/User/CourseDashboard1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb3Vyc2VEYXNoYm9hcmQxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jacquelyn/OneDrive/Documents/CodingDojo2023/FinalGroupProject/CodePink/Views/User/Laelynn.cshtml]

@@ -1171,12 +1171,16 @@ text {
 
 
 /* SIGN UP FORM */
+#SignupForLaelynn {
+  height: 1200px;
+}
 .sulogocorner {
   height: 27vh;
   margin-left: 160vh;
+  margin-top: -55vh;
 }
 .signup {
-  background-color: rgb(255, 145, 209);
+  background-color: rgb(255, 192, 241);
   width: 1550px;
   border-radius: 2vh;
   margin-bottom: 4vh;
@@ -1196,8 +1200,49 @@ text {
 ;
 }
 #signupform {
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+#SignUpHeader {
+  font-family: "PP Editorial New";
+  font-weight: 900;
+  font-size: 15vh;
+  font-style: italic;
+  margin-bottom: -2vh;
+  margin-top: -1vh;
+}
+.action-button {
+  background-color: #000;
+  color: white;
+  height: 50px;
+  width: 150px;
+  margin-top: 2vh;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.signupsection {
+  margin-bottom: 2vh;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+.input-field {
+  width: 300px;
+  height: 35px;
+  border-radius: 15px;
+}
+.input-label {
+  width: 200px;
+  font-family: "PP Editorial New";
+}
+input {
+  font-family: "PP Editorial New";
+}
+label {
+  font-family: "PP Editorial New";
+}
+
 
 
 
@@ -1399,8 +1444,6 @@ font-family: 'Clash Display';
   font-style: normal;
   font-display: swap;
 }
-
-
 
 
 .top-link {

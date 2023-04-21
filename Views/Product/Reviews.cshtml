@@ -10,11 +10,16 @@
 </head>
 
 <body>
-    <header></header>
-    <main>
+    <header>
         @await Html.PartialAsync("ProductPartials/_NavBar")
-        @await Html.PartialAsync("ProductPartials/_Footer")
+    </header>
+    <main>
+
+
     </main>
 </body>
+<footer>
+    @await Html.PartialAsync("ProductPartials/_Footer")
+</footer>
 
 </html>

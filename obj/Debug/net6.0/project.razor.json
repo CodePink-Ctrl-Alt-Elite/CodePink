@@ -16333,11 +16333,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\ProductPartials\\_TopNavCourses.cshtml",
-      "TargetPath": "Views\\Product\\ProductPartials\\_TopNavCourses.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\Reviews.cshtml",
       "TargetPath": "Views\\Product\\Reviews.cshtml",
       "FileKind": "mvc"
@@ -16493,11 +16488,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\TechAccessories.cshtml",
-      "TargetPath": "Views\\Product\\TechAccessories.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\IndexPartials\\_Footer.cshtml",
       "TargetPath": "Views\\Product\\IndexPartials\\_Footer.cshtml",
       "FileKind": "mvc"
@@ -16510,6 +16500,11 @@
     {
       "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\ProductPartials\\_Footer.cshtml",
       "TargetPath": "Views\\Product\\ProductPartials\\_Footer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\ProductPartials\\_TopNav.cshtml",
+      "TargetPath": "Views\\Product\\ProductPartials\\_TopNav.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16583,8 +16578,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\User\\CourseDashboard1.cshtml",
+      "TargetPath": "Views\\User\\CourseDashboard1.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\IndexPartials\\_NavBar.cshtml",
       "TargetPath": "Views\\Product\\IndexPartials\\_NavBar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\Views\\Product\\Accessories.cshtml",
+      "TargetPath": "Views\\Product\\Accessories.cshtml",
       "FileKind": "mvc"
     }
   ],

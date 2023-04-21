@@ -36,7 +36,7 @@ public class UserController : Controller
 
 
     [HttpGet("codepink/coursedashboard")]
-    public IActionResult CourseDashboard()
+    public IActionResult Courses()
     {
         return View("CourseDashboard");
     }
@@ -122,7 +122,7 @@ public class UserController : Controller
         {
             return RedirectToAction("CodePink", "Product");
         }
-        return RedirectToAction("CourseDashboard");
+        return RedirectToAction("Courses");
     }
 
     [HttpGet("/logout")]
