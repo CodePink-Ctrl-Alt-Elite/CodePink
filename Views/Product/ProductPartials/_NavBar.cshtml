@@ -10,10 +10,6 @@
 
 
 
-
-
-
-
         {
             <li>
                 <a href="/codepink/login">STUDENT LOGIN</a>
@@ -21,13 +17,9 @@
 
 
 
-
-
-
-
         }
         <li class="nav-item dropdown">
-            <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+            <a href="/" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                 SHOP
             </a>
             <ul id="submenu" class="classthree">
@@ -40,14 +32,10 @@
                 <li><a href="/codepink/shop/furniture" class="dropdown-item">Furniture</a></li>
             </ul>
         </li>
-        <li>
+        @* <li>
             <a href="/codepink/reviews">PRODUCT REVIEWS</a>
-        </li>
+            </li> *@
         @if (Context.Session.GetInt32("uid") == 1)
-
-
-
-
 
 
 
@@ -58,16 +46,8 @@
 
 
 
-
-
-
-
         }
         @if (Context.Session.GetInt32("uid") != null)
-
-
-
-
 
 
 
@@ -75,10 +55,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/logout">LOGOUT</a>
             </li>
-
-
-
-
 
 
 

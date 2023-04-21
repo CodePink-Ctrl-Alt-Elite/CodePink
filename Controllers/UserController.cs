@@ -72,7 +72,7 @@ public class UserController : Controller
     {
         if (!ModelState.IsValid)
         {
-            return Redirect("/register#SignUpForLaelynn");
+            return Redirect("/codepink/laelynn#SignUpForLaelynn");
         }
         else
         {
@@ -84,7 +84,7 @@ public class UserController : Controller
 
             HttpContext.Session.SetInt32("uid", newUser.UserId);
             HttpContext.Session.SetString("name", newUser.FirstName + " " + newUser.LastName);
-            return RedirectToAction("CourseDashboard");
+            return RedirectToAction("Courses");
         }
     }
 

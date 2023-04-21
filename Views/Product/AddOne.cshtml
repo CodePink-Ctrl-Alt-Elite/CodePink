@@ -28,16 +28,17 @@
                     <span asp-validation-for="Category" class="text-danger font-weight-bold"></span>
                     <input class="form-control" asp-for="Category">
                     </div> *@
-                <label class="label" for="category">Category :</label>
-                <span asp-validation-for="Category" class="text-danger font-weight-bold"></span>
-                <select name="Category" id="Category">
-                    <option value="Laptops">Laptops</option>
-                    <option value="MonitorsAndDesktops">Monitors & Desktops</option>
-                    <option value="Tablets">IPads & Tablets</option>
-                    <option value="Earphones">Earphones & Earbuds</option>
-                    <option value="Accessories">Tech & Desk Accessories</option>
-                    <option value="Furniture">Furniture</option>
-                </select>
+                <section id="catsection">
+                    <label id="catlabel" class="label" for="category">Category :</label>
+                    <select name="Category" id="Category">
+                        <option class="option" value="Laptops">Laptops</option>
+                        <option class="option" value="MonitorsAndDesktops">Monitors & Desktops</option>
+                        <option class="option" value="Tablets">IPads & Tablets</option>
+                        <option class="option" value="Earphones">Earphones & Earbuds</option>
+                        <option class="option" value="Accessories">Tech & Desk Accessories</option>
+                        <option class="option" value="Furniture">Furniture</option>
+                    </select>
+                </section>
                 <div class="section">
                     <label class="label" asp-for="Price">Price :</label>
                     <span asp-validation-for="Price" class="text-danger font-weight-bold"></span>
@@ -63,17 +64,17 @@
                     <span asp-validation-for="Img4" class="text-danger font-weight-bold"></span>
                     <input class="form-control" asp-for="Img4">
                 </div>
-                <div class="section">
+                @* <div class="section">
                     <label class="label" asp-for="Img5">Fifth Image URL :</label>
                     <span asp-validation-for="Img5" class="text-danger font-weight-bold"></span>
                     <input class="form-control" asp-for="Img5">
-                </div>
+                    </div> *@
                 <div class="section">
                     <label class="label" asp-for="Description">Description of product :</label>
                     <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
-                    <input class="form-control" asp-for="Description">
+                    <textarea asp-for="Description"></textarea>
                 </div>
-                <button class="button-56">Add Product</button>
+                <button class="atcbutton">Add Product</button>
             </form>
         </div>
     </main>

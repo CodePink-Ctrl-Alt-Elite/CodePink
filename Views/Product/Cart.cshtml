@@ -1,81 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/products/shop.css">
     <title>Document</title>
+    <link rel="stylesheet" href="~/css/laelynn/courses.css">
 </head>
+@await Html.PartialAsync("ProductPartials/_NavBar")
 
-<body>
-    <header>
-        @await Html.PartialAsync("ProductPartials/_Nav")
-    </header>
+@model List<Product>
 
-    @model List<Product>
+<div class="top-container">
+    <h1 class="title">Your Cart</h1>
+    <form>
+        <input type="button" value="Go Back" onclick="history.go(-1)">
+    </form>
+    <div class="subtitle-container">
+        @* <a class="subtitle-cart" asp-controller="Product" asp-action="AllProducts">Continue Shopping.</a> *@
 
-    <div class="top-container">
-        <h1 class="title">Your Cart</h1>
-        <div class="subtitle-container">
-            <a class="subtitle-cart" asp-controller="Product" asp-action="AllProducts">Continue Shopping.</a>
-            <a class="subtitle-cart" asp-controller="Product" asp-action="Checkout">Checkout.</a>
-        </div>
+        <a class="subtitle-cart" asp-controller="Product" asp-action="Checkout">Checkout.</a>
     </div>
-    <div>
-        @{
-            double? totalPrice = 0;
-        }
-        @foreach (Product product in Model)
-        {
-            <div class="card h-100 all-bg" style="width: 18rem;">
-                <img src="@product.Img1" class="card-img-top w-100" style="width: 18rem;" alt="@product.Name">
-                <div class="card-body">
-                    <div class="d-flex flex-row justify-content-between align-items-start mb3 sub-top-container">
-                        <p class="card-text grey-text">@product.Price</p>
+</div>
+<div>
+    @{
+        double? totalPrice = 0;
+    }
+    @foreach (Product product in Model)
+    {
+        <div class="card h-100 all-bg" style="width: 18rem;">
+            <img src="@product.Img1" class="card-img-top w-100" style="width: 18rem;" alt="@product.Name">
+            <div class="card-body">
+                <div class="d-flex flex-row justify-content-between align-items-start mb3 sub-top-container">
+                    <p class="card-text grey-text">@product.Price</p>
+                </div>
+                <div>
+                    <a href="/codepink/@product.ProductId">@product.Name</a>
+                    <form asp-controller="Product" asp-action="RemoveFromCart" asp-route-id="@product.ProductId">
+                        <button class="btn">
+                            <span class="all-bg"><i class="fa-solid fa-trash">Delete</i></span>
+                        </button>
+                    </form>
+                    @* *@
+                    <div class="container">
+                        <input type="button" onclick="decrementValue()" value="-" />
+                        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                        <input type="button" onclick="incrementValue()" value="+" />
                     </div>
-                    <div>
-                        <a href="/codepink/@product.ProductId">@product.Name</a>
-                        <form asp-controller="Product" asp-action="RemoveFromCart" asp-route-id="@product.ProductId">
-                            <button class="btn">
-                                <span class="all-bg"><i class="fa-solid fa-trash">Delete</i></span>
-                            </button>
-                        </form>
-                        @* *@
-                        <div class="container">
-                            <input type="button" onclick="decrementValue()" value="-" />
-                            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
-                            <input type="button" onclick="incrementValue()" value="+" />
-                        </div>
-                        @* *@
+                    @* *@
 
 
-                    </div>
-                    <div class="bottom-card-text-container">
-                        <div class="left-container">
-                            <p class="card-text bold">$@product.Price</p>
-                            @{
-                                totalPrice += @product.Price;
-                            }
-                        </div>
+                </div>
+                <div class="bottom-card-text-container">
+                    <div class="left-container">
+                        <p class="card-text bold">$@product.Price</p>
+                        @{
+                            totalPrice += @product.Price;
+                        }
                     </div>
                 </div>
             </div>
-        }
-    </div>
-    <h4 class="total">
-        @{
-            string formattedTotal = $"{@totalPrice:0.00}";
-        }
-        Total: $@formattedTotal
-    </h4>
+        </div>
+    }
+</div>
+<h4 class="total">
+    @{
+        string formattedTotal = $"{@totalPrice:0.00}";
+    }
+    Total: $@formattedTotal
+</h4>
 
 
-    <footer>
-        @await Html.PartialAsync("IndexPartials/_Footer")
-    </footer>
-    <script src="~/js/index/index.js"></script>
-</body>
+<footer>
+    @await Html.PartialAsync("IndexPartials/_Footer")
+</footer>
+<script src="~/js/index/index.js"></script>
+
 
 </html>

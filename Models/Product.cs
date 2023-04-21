@@ -22,7 +22,6 @@ public class Product
     public string Img2 { get; set; }
     public string Img3 { get; set; }
     public string Img4 { get; set; }
-    public string Img5 { get; set; }
 
     [Required]
     public string Description { get; set; }

@@ -87,7 +87,7 @@ public class ProductController : Controller
     [HttpGet("/codepink/shop/accessories")]
     public IActionResult Accessories()
     {
-        List<Product> Accessories = db.Products.Where(p => p.Category == "TechDeskAccessories").ToList();
+        List<Product> Accessories = db.Products.Where(p => p.Category == "Accessories").ToList();
         return View("Accessories", Accessories);
     }
 
@@ -181,7 +181,7 @@ public class ProductController : Controller
             item.Img2 = p.Img2;
             item.Img3 = p.Img3;
             item.Img4 = p.Img4;
-            item.Img5 = p.Img5;
+            // item.Img5 = p.Img5;
             item.Description = p.Description;
             item.UpdatedAt = DateTime.Now;
 

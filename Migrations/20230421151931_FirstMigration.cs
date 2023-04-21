@@ -62,8 +62,6 @@ namespace CodePink.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Img4 = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Img5 = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Description = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     AddToCart = table.Column<bool>(type: "tinyint(1)", nullable: false),

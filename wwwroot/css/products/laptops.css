@@ -21,6 +21,10 @@ font-weight: bold;
 text-decoration: none;
 
 }
+nav div a:hover {
+color: #ff95ca;
+transition: 0.3s;
+}
 #cartimg {
 height: 4vh;
 }
@@ -43,26 +47,48 @@ align-items: center;
   visibility: hidden;
   z-index: 1;
   list-style-type: none;
+  background-color: #000;
 }
 #submenu li {
   float: none;
   width: 170%;
-  margin-left: -70px;
+  margin-left: -120px;
   text-align: center;
-margin-top: 3vh;
+/* margin-top: 3vh; */
+background-color: #000;
+padding: 10px;
+}
+#submenu li a {
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+font-family: 'Clash Display', sans-serif;
+background-color: #000;
+padding-bottom: 5px;
+}
+#submenu li a:hover {
+color: #ff95ca;
+transition: 0.3s;
 }
 li:hover ul#submenu {
   opacity: 1;
   top: 50px;
   visibility: visible;
 }
-
-
+#eardd {
+padding-top: 20px;
+}
+#furndd {
+padding-top: 20px;
+}
+#accdd {
+}
 
 
 .productbanner {
 width: 100%;
 margin-bottom: 10vh;
+margin-top: -3vh;
 }
 
 
@@ -76,26 +102,64 @@ margin: auto;
 }
 .productcard{
 margin-bottom: 10vh;
-height: 45vh;
+height: 53vh;
 width: 300px;
 box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
 border-radius: 10px;
 overflow: hidden;
 margin: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 20px;
 
 }
 .pricecartrow {
 display: flex;
 flex-direction: row;
+
 }
 .prodimg1 {
-height: 20vh;
+height: 25vh;
+margin: 0 auto;
 }
 
 a {
 text-decoration: none;
 color: black;
 font-family: 'Gilroy';
+}
+.pricenamerow {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding-left: 30px;
+padding-right: 60px;
+width: 300px;
+}
+.btn {
+/* margin-left: 40px;
+margin-top: 20px; */
+}
+.atcbutton {
+/* margin-left: 20vh; */
+padding: 12px 18px;
+border: none;
+align-self: flex-start;
+background-color: #ff6f93;
+color: #fff;
+border-radius: 12px;
+transition: 300ms;
+font-weight: bold;
+margin-left: 65px;
+margin-top: 20px;
+}
+
+.atcbutton:hover {
+cursor: pointer;
+background-color: #f1f1f1;
+color: #fc55a0;
+box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 /* FOOTER */

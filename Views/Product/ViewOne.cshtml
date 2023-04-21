@@ -5,39 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/products/viewone.css">
     <title>Document</title>
 </head>
 @model Product
-<header>
-    @await Html.PartialAsync("ProductPartials/_NavBar")
-</header>
 
 <body>
-
+    <header>
+        @await Html.PartialAsync("ProductPartials/_NavBar")
+    </header>
     <main>
+        <div class="viewdiv">
+            @{
+                Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                if (Context.Session.GetInt32("uid") == 1)
+                {
+                    <div class="leftofview">
+                        <img class="bigimg" src="@Model.Img1" alt="Post Photo">
+                        <div class="lilpics">
+                            <img class="lilimgs" src="@Model.Img2" alt="Img 2">
+                            <img class="lilimgs" src="@Model.Img3" alt="Img 2">
+                            <img class="lilimgs" src="@Model.Img4" alt="Img 2">
+                        </div>
+                    </div>
+                    <div class="rightofview">
+                        <div class="nameandprice">
+                            <h1 class="prodname">@Model.Name</h1>
+                            <h5 class="prodprice">$@Model.Price</h5>
+                        </div>
+                        <h5 class="category">Category: @Model.Category</h5>
+                        <h6 class="description">@Model.Description</h6>
+                        <div class="vieweditanddeletebuttons" class="d-flex">
+                            <a href="/codepink/delete/@Model.ProductId"><button class="deletebutton">Delete</button></a>
+                            <a href="/codepink/edit/@Model.ProductId" class="editbutton">Edit</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="leftofview">
+                        <img class="bigimg" src="@Model.Img1" alt="Post Photo">
+                        <div class="lilpics">
+                            <img class="lilimgs" src="@Model.Img2" alt="Img 2">
+                            <img class="lilimgs" src="@Model.Img3" alt="Img 2">
+                            <img class="lilimgs" src="@Model.Img4" alt="Img 2">
+                        </div>
+                    </div>
+                    <div class="rightofview">
+                        <div class="nameandprice">
+                            <h1 class="prodname">@Model.Name</h1>
+                            <h5 class="prodprice">$@Model.Price</h5>
+                        </div>
+                        <h5 class="category">Category: @Model.Category</h5>
+                        <h6 class="description">@Model.Description</h6>
+                        <form asp-controller="Product" asp-action="AddToCart" asp-route-id="@Model.ProductId">
+                            <button class="atcbutton" onclick="buttonClick()">Add To Cart</button>
+                        </form>
+                    </div>
+                }
+            }
 
-        <h1>This is the view one product page.</h1>
-
-        <h3>@Model.Name</h3>
-        <h3>@Model.Category</h3>
-        <img class="viewImg" src="@Model.Img1">
-        <img class="viewImg" src="@Model.Img2">
-        <img class="viewImg" src="@Model.Img3">
-        <img class="viewImg" src="@Model.Img4">
-        <img class="viewImg" src="@Model.Img5">
-        <h3>Description: @Model.Description</h3>
-        <h3>Price: $@Model.Price</h3>
-
-        @if (Context.Session.GetInt32("uid") == 1)
-        {
-            <a href="/codepink/edit/@Model.ProductId"><button class="button-56">Edit Product</button></a>
-            <a href="/codepink/delete/@Model.ProductId"><button class="button-56">Delete Product</button></a>
-        }
-
-        <form>
-            <input type="button" value="Go Back" onclick="history.go(-1)">
-        </form>
-
+        </div>
     </main>
     <footer>
         @await Html.PartialAsync("ProductPartials/_Footer")

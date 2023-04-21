@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodePink.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20230419144551_FirstMigration")]
+    [Migration("20230421151931_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,10 +54,6 @@ namespace CodePink.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Img4")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Img5")
                         .IsRequired()
                         .HasColumnType("longtext");
 
