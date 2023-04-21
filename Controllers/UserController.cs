@@ -46,7 +46,7 @@ public class UserController : Controller
     {
         if (HttpContext.Session.GetInt32("uid") != null)
         {
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("CodePink", "Product");
         }
         else
         {

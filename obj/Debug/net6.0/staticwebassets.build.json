@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1E6rZYzdwVeydVlHaWVtc3cG95zzXYSam/LEN3niHbk=",
+  "Hash": "Y77rrDPu3utrRSCSPdauL9/UuVx344dUXP5JmirCjzo=",
   "Source": "CodePink",
   "BasePath": "_content/CodePink",
   "Mode": "Default",
@@ -100,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\laelynn\\courses.css"
-    },
-    {
-      "Identity": "C:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\wwwroot\\css\\laelynn\\courses1.css",
-      "SourceId": "CodePink",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\wwwroot\\",
-      "BasePath": "_content/CodePink",
-      "RelativePath": "css/laelynn/courses1.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\laelynn\\courses1.css"
     },
     {
       "Identity": "C:\\Users\\Jacquelyn\\OneDrive\\Documents\\CodingDojo2023\\FinalGroupProject\\CodePink\\wwwroot\\css\\laelynn\\laelynn.css",

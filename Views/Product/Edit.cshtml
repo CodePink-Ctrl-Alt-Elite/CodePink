@@ -16,8 +16,8 @@
     </header>
     <main>
         <div class="middle">
-            <h1 class="header">Add new products</h1>
-            <form class="form" asp-controller="Product" asp-action="CreateProduct" method="Post">
+            <h1 class="header">Update product</h1>
+            <form class="form" action="/codepink/updateProduct/@Model.ProductId" method="Post">
                 <div class="section">
                     <label class="label" asp-for="Name">Product Name :</label>
                     <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>

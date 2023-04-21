@@ -25,15 +25,15 @@
                     <img class="prodimg1" src="@p.Img1" alt="Post Image">
                     <h4><a href="/codepink/@p.ProductId">@p.Name</a></h4>
                     <div class="pricecartrow">
-                        <h5>$S@p.Price</h5>
-                        <button class="btn" onclick="buttonClick()">Add To Cart</button>
-                    </div>
-                    <div id="editanddeletedashboard">
-                        <a href="/product/@p.ProductId/edit" class="dashbutton" >Edit</a>
-                        <form asp-action="Deletesweet" asp-route-Productid="@p.ProductId" asp-controller="Admin" method="post">
-                        <input type="submit" value="Delete">
+                        <h5>Price: @p.Price</h5>
+                        <form asp-controller="Product" asp-action="AddToCart" asp-route-id="@p.ProductId">
+                            <button class="btn" onclick="buttonClick()">Add To Cart</button>
                         </form>
                     </div>
+                    @* <div id="editanddeletedashboard">
+                    <a href="/codepink/edit/@p.ProductId"><button class="button-56">Edit Product</button></a>
+                    <a href="/codepink/delete/@p.ProductId"><button class="button-56">Delete Product</button></a>
+                    </div> *@
                 </div>             
             }
         }

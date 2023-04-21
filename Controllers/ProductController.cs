@@ -47,14 +47,14 @@ public class ProductController : Controller
         return View("Reviews");
     }
 
-    [HttpGet("/codepink/shop")]
-    public IActionResult AllProducts()
-    {
-        List<Product> addedProducts = db.Products
-        .OrderBy(p => p.Category).ToList();
+    // [HttpGet("/codepink/shop")]
+    // public IActionResult AllProducts()
+    // {
+    //     List<Product> addedProducts = db.Products
+    //     .OrderBy(p => p.Category).ToList();
 
-        return View("Shop", addedProducts);
-    }
+    //     return View("Shop", addedProducts);
+    // }
 
     [HttpGet("/codepink/shop/laptops")]
     public IActionResult Laptops()
@@ -109,7 +109,7 @@ public class ProductController : Controller
         {
             Console.WriteLine("I am here1");
             Console.WriteLine(productId);
-            return RedirectToAction("AllProducts");
+            return RedirectToAction("CodePink");
         }
         else
         {
@@ -136,7 +136,7 @@ public class ProductController : Controller
         {
             db.Products.Add(p);
             db.SaveChanges();
-            return RedirectToAction("AllProducts");
+            return RedirectToAction("CodePink");
         }
         return View("AddOne");
     }
@@ -150,7 +150,7 @@ public class ProductController : Controller
         .FirstOrDefault(p => p.ProductId == productId);
         if (uid != 1)
         {
-            return RedirectToAction("AllProducts");
+            return RedirectToAction("CodePink");
         }
         else
         {
@@ -170,7 +170,7 @@ public class ProductController : Controller
         Product? item = db.Products.FirstOrDefault(item => item.ProductId == productId);
         if (item == null || item.UserId != HttpContext.Session.GetInt32("uid"))
         {
-            return RedirectToAction("AllProducts");
+            return RedirectToAction("CodePink");
         }
         else
         {
@@ -202,7 +202,7 @@ public class ProductController : Controller
             db.Products.Remove(item);
             db.SaveChanges();
         }
-        return RedirectToAction("AllProducts");
+        return RedirectToAction("CodePink");
     }
 
 
@@ -215,7 +215,7 @@ public class ProductController : Controller
         if (dbProduct == null)
         {
             Console.WriteLine("Not added to cart");
-            return RedirectToAction("AllProducts");
+            return RedirectToAction("CodePink");
         }
 
         dbProduct.AddToCart = true;
@@ -235,10 +235,7 @@ public class ProductController : Controller
         Product? dbProduct = db.Products.FirstOrDefault(t => t.ProductId == id);
         if (dbProduct == null)
         {
-            return RedirectToAction("AllProducts");
-            // Console.BackgroundColor = ConsoleColor.Black;
-            // Console.ForegroundColor = ConsoleColor.Red;
-            // Console.WriteLine("FAIL.");
+            return RedirectToAction("CodePink");
         }
 
         dbProduct.AddToCart = false;
